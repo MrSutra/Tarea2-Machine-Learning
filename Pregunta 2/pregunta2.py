@@ -160,17 +160,17 @@ def score_the_model(model,x,y,xt,yt,text):
     precision, recall, fscore, support = precision_recall_fscore_support(yt, model.predict(xt))
 
     if text == 'BernoulliNB':
-        BNB = []
-        BNB.extend((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
+        #BNB = []
+        BNB.append((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
     elif text == 'MULTINOMIAL':
-        multinomial = []
-        multinomial.extend((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
+        #multinomial = []
+        multinomial.append((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
     elif text == 'LOGISTIC':
-        logistic = []
-        logistic.extend((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
+        #logistic = []
+        logistic.append((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
     elif text == 'SVM':
-        svm = []
-        svm.extend((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
+        #svm = []
+        svm.append((acc_tr,acc_test,np.mean(precision),np.mean(recall),np.mean(fscore)))
 
 # F
 def do_NAIVE_BAYES(x,y,xt,yt):
